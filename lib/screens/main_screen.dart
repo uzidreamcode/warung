@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:flutter_foodybite/screens/home.dart';
 import 'package:flutter_foodybite/screens/riwayat.dart';
+import 'package:flutter_foodybite/diskon.dart';
+import 'package:flutter_foodybite/profil.dart';
 
 class MainScreen  extends StatefulWidget {
   @override
@@ -17,6 +19,8 @@ class _MainScreenState  extends State<MainScreen> {
 
     Home(),
     Riwayat(),
+    produk(),
+
   ]; // to store nested tabs
   final PageStorageBucket bucket = PageStorageBucket();
   Widget currentScreen = Home(); // Our first view in viewport
@@ -32,7 +36,9 @@ class _MainScreenState  extends State<MainScreen> {
         backgroundColor : Color(0xff5f0eb3),
         // child: Lottie.asset('../assets/plus.json'),
         child: Icon(Icons.add_shopping_cart_outlined ),
-        onPressed: () {},
+        onPressed: () {
+
+        },
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       bottomNavigationBar: BottomAppBar(
@@ -79,7 +85,7 @@ class _MainScreenState  extends State<MainScreen> {
                     onPressed: () {
                       setState(() {
                         currentScreen =
-                            Riwayat(); // if user taps on this dashboard tab will be active
+                            produk(); // if user taps on this dashboard tab will be active
                         currentTab = 1;
                       });
                     },
@@ -87,7 +93,7 @@ class _MainScreenState  extends State<MainScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
-                          Icons.access_time,
+                          Icons.fastfood,
                           color: currentTab == 1 ? Color(0xff5f0eb3) : Colors.grey,
                         ),
                         // Text(
@@ -111,18 +117,18 @@ class _MainScreenState  extends State<MainScreen> {
                     padding: EdgeInsets.only(left: -100),
                     // minWidth: 40,
                     onPressed: () {
-                      // setState(() {
-                      //   currentScreen =
-                      //       Profile(); // if user taps on this dashboard tab will be active
-                      //   currentTab = 2;
-                      // });
+                      setState(() {
+                        currentScreen =
+                            Riwayat(); // if user taps on this dashboard tab will be active
+                        currentTab = 2;
+                      });
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Icon(
 
-                          Icons.label,
+                          Icons.access_time,
                           color: currentTab == 2 ? Color(0xff5f0eb3) : Colors.grey,
                         ),
                         // Text(
@@ -138,11 +144,11 @@ class _MainScreenState  extends State<MainScreen> {
                     padding: EdgeInsets.only(right: -10),
                     // minWidth: 40,
                     onPressed: () {
-                      // setState(() {
-                      //   currentScreen =
-                      //       Settings(); // if user taps on this dashboard tab will be active
-                      //   currentTab = 3;
-                      // });
+                      setState(() {
+                        currentScreen =
+                            Profile2(); // if user taps on this dashboard tab will be active
+                        currentTab = 3;
+                      });
                     },
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,

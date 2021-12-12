@@ -54,16 +54,16 @@ class Home extends StatelessWidget {
               color: Theme.of(context).accentColor,
             ),
           ),
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (BuildContext context) {
-                  return Trending();
-                },
-              ),
-            );
-          },
+          // onPressed: () {
+          //   Navigator.push(
+          //     context,
+          //     MaterialPageRoute(
+          //       builder: (BuildContext context) {
+          //         return Trending();
+          //       },
+          //     ),
+          //   );
+          // },
         ),
       ],
     );
