@@ -88,7 +88,7 @@ class RiwayatPageState extends State<Riwayat> {
               child: ListView.builder(
                   itemCount: restaurants == null ? 0 : restaurants.length,
                   itemBuilder: (BuildContext context, int index) {
-                    Map restaurant = restaurants[index];
+                    final restaurant = restaurants[index];
                     return _historyWidget(restaurant);
 
                   }),
@@ -99,7 +99,7 @@ class RiwayatPageState extends State<Riwayat> {
     );
   }
 
-  Widget _historyWidget(restaurant history) {
+  Widget _historyWidget(Restaurant history) {
     return Container(
 //      height: 100.0,
       margin: EdgeInsets.only(bottom: 16.0, left: 16.0, right: 16.0),
@@ -108,12 +108,15 @@ class RiwayatPageState extends State<Riwayat> {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
             children: <Widget>[
+
               Padding(
                 padding: const EdgeInsets.only(right: 16.0),
+
                 child: Image.asset(
+
                   history.img,
-                  height: 100.0,
-                  width: 100.0,
+                  height: 120.0,
+                  width: 120.0,
                 ),
               ),
               Expanded(
@@ -125,7 +128,7 @@ class RiwayatPageState extends State<Riwayat> {
                     children: <Widget>[
                       Text(
                         history.title,
-                        style: TextStyle(fontWeight: FontWeight.bold),
+                        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10),
                         textAlign: TextAlign.left,
                       ),
                       Text(history.title)
@@ -141,7 +144,7 @@ class RiwayatPageState extends State<Riwayat> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
-                        'Rp 30.000',
+                        history.harga,
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
                       Row(
