@@ -21,7 +21,7 @@ class Home extends StatelessWidget {
         child: ListView(
           children: <Widget>[
             SizedBox(height: 20.0),
-            buildRestaurantRow('Makanan Terlaris', context),
+            buildRestaurantRow('Produk Terlaris', context),
             SizedBox(height: 10.0),
             buildRestaurantList(context),
             SizedBox(height: 10.0),

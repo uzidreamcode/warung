@@ -121,17 +121,22 @@ class RiwayatPageState extends State<Riwayat> {
               ),
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(20),
+
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
                       Text(
                         history.title,
-                        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 10),
+                        style: TextStyle(fontWeight: FontWeight.bold,fontSize: 17),
                         textAlign: TextAlign.left,
                       ),
-                      Text(history.title)
+                      Text(
+                        '22-02-2021',
+                        style: TextStyle(color: Colors.grey,fontSize: 13,),
+
+                      )
                     ],
                   ),
                 ),

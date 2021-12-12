@@ -31,7 +31,7 @@ class _MainScreenState  extends State<MainScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor : Color(0xff5f0eb3),
         // child: Lottie.asset('../assets/plus.json'),
-        child: Icon(Icons.add),
+        child: Icon(Icons.add_shopping_cart_outlined ),
         onPressed: () {},
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -122,7 +122,7 @@ class _MainScreenState  extends State<MainScreen> {
                       children: <Widget>[
                         Icon(
 
-                          Icons.settings,
+                          Icons.label,
                           color: currentTab == 2 ? Color(0xff5f0eb3) : Colors.grey,
                         ),
                         // Text(
